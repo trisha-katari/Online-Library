@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Tailwind CSS Cards</title>
+    <style>
+        .bg-library {
+            background-image: url('https://cdn.pixabay.com/photo/2016/03/26/22/21/books-1281581_1280.jpg'); /* Replace with your image URL */
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-gray-100">
+        <nav class="bg-white shadow-md">
+            <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
+                <div class="text-2xl font-bold text-blue-600">
+                    MyLibrary
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#" class="text-gray-600 hover:text-blue-600">Home</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600">Catalog</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600">About Us</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600">Contact</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600">FAQs</a>
+                </div>
+                <div class="hidden md:flex">
+                    <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Login</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-600 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="hidden md:hidden">
+                <div class="flex flex-col space-y-2 px-4 py-2 bg-white shadow-md">
+                    <a href="#" class="text-gray-600 hover:text-blue-600">Home</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600">Catalog</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600">About Us</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600">Contact</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600">FAQs</a>
+                    <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Login</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+    <!-- Background Section -->
+    <section class="bg-library h-screen flex items-center justify-center text-white">
+        <div class="text-center p-8 bg-black bg-opacity-50 rounded-lg">
+            <h1 class="text-4xl font-bold mb-4">Welcome to MyLibrary</h1>
+            <p class="mb-6">Discover your next favorite book. Explore our extensive catalog.</p>
+            <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Cards Section -->
+    <div class="bg-gray-100 flex items-center justify-center min-h-screen">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img class="w-full h-48 object-cover" src="https://cdn.pixabay.com/photo/2024/03/19/19/08/book-8643904_1280.jpg" alt="Card Image">
+                <div class="p-4">
+                    <h2 class="text-lg font-bold mb-2">Card Title 1</h2>
+                    <p class="text-gray-700 mb-4">This is a short description of the card content. It's engaging and informative.</p>
+                    <a href="#" class="text-blue-500 hover:underline">Read More</a>
+                </div>
+            </div>
+            <!-- Card 2 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img class="w-full h-48 object-cover" src="https://cdn.pixabay.com/photo/2016/10/25/15/55/book-1769228_1280.jpg" alt="Card Image">
+                <div class="p-4">
+                    <h2 class="text-lg font-bold mb-2">Card Title 2</h2>
+                    <p class="text-gray-700 mb-4">This is a short description of the card content. It's engaging and informative.</p>
+                    <a href="#" class="text-blue-500 hover:underline">Read More</a>
+                </div>
+            </div>
+            <!-- Card 3 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img class="w-full h-48 object-cover" src="https://cdn.pixabay.com/photo/2018/07/01/20/01/music-3510326_1280.jpg" alt="Card Image">
+                <div class="p-4">
+                    <h2 class="text-lg font-bold mb-2">Card Title 3</h2>
+                    <p class="text-gray-700 mb-4">This is a short description of the card content. It's engaging and informative.</p>
+                    <a href="#" class="text-blue-500 hover:underline">Read More</a>
+                </div>
+            </div>
+            <!-- Card 4 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img class="w-full h-48 object-cover" src="https://cdn.pixabay.com/photo/2020/05/15/19/37/book-5174879_1280.jpg" alt="Card Image">
+                <div class="p-4">
+                    <h2 class="text-lg font-bold mb-2">Card Title 4</h2>
+                    <p class="text-gray-700 mb-4">This is a short description of the card content. It's engaging and informative.</p>
+                    <a href="#" class="text-blue-500 hover:underline">Read More</a>
+                </div>
+            </div>
+            <!-- Card 5 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img class="w-full h-48 object-cover" src="https://cdn.pixabay.com/photo/2016/09/10/17/18/book-1659717_1280.jpg" alt="Card Image">
+                <div class="p-4">
+                    <h2 class="text-lg font-bold mb-2">Card Title 5</h2>
+                    <p class="text-gray-700 mb-4">This is a short description of the card content. It's engaging and informative.</p>
+                    <a href="#" class="text-blue-500 hover:underline">Read More</a>
+                </div>
+            </div>
+            <!-- Card 6 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img class="w-full h-48 object-cover" src="https://cdn.pixabay.com/photo/2016/02/16/21/07/books-1204029_1280.jpg" alt="Card Image">
+                <div class="p-4">
+                    <h2 class="text-lg font-bold mb-2">Card Title 6</h2>
+                    <p class="text-gray-700 mb-4">This is a short description of the card content. It's engaging and informative.</p>
+                    <a href="#" class="text-blue-500 hover:underline">Read More</a>
+                </div>
+            </div>
+            <!-- Card 7 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img class="w-full h-48 object-cover" src="https://cdn.pixabay.com/photo/2015/11/19/21/11/book-1052014_1280.jpg" alt="Card Image">
+                <div class="p-4">
+                    <h2 class="text-lg font-bold mb-2">Card Title 7</h2>
+                    <p class="text-gray-700 mb-4">This is a short description of the card content. It's engaging and informative.</p>
+                    <a href="#" class="text-blue-500 hover:underline">Read More</a>
+                </div>
+            </div>
+            <!-- Card 8 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img class="w-full h-48 object-cover" src="https://cdn.pixabay.com/photo/2021/08/02/11/03/hallelujah-6516410_1280.jpg" alt="Card Image">
+                <div class="p-4">
+                    <h2 class="text-lg font-bold mb-2">Card Title 8</h2>
+                    <p class="text-gray-700 mb-4">This is a short description of the card content. It's engaging and informative.</p>
+                    <a href="#" class="text-blue-500 hover:underline">Read More</a>
+                </div>
+            </div>
+            <!-- Card 9 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                <img class="w-full h-48 object-cover" src="https://cdn.pixabay.com/photo/2013/05/02/10/53/picture-108539_1280.jpg" alt="Card Image">
+                <div class="p-4">
+                    <h2 class="text-lg font-bold mb-2">Card Title 9</h2>
+                    <p class="text-gray-700 mb-4">This is a short description of the card content. It's engaging and informative.</p>
+                    <a href="#" class="text-blue-500 hover:underline">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="bg-gray-100">
+        <footer class="bg-gray-800 text-white">
+            <div class="max-w-7xl mx-auto px-6 py-8">
+                <div class="flex flex-col md:flex-row justify-between">
+                    <div class="mb-6 md:mb-0">
+                        <h2 class="text-2xl font-bold">MyLibrary</h2>
+                        <p class="mt-2">Your go-to source for books and knowledge.</p>
+                    </div>
+                    <div class="mb-6 md:mb-0">
+                        <ul class="mt-2 flex space-x-4">
+                            <li><a href="#" class="hover:text-blue-400">Home</a></li>
+                            <li><a href="#" class="hover:text-blue-400">Catalog</a></li>
+                            <li><a href="#" class="hover:text-blue-400">About Us</a></li>
+                            <li><a href="#" class="hover:text-blue-400">Contact</a></li>
+                            <li><a href="#" class="hover:text-blue-400">FAQs</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold">Contact Us</h3>
+                        <p class="mt-2">Email: <a href="mailto:info@mylibrary.com" class="hover:text-blue-400">info@mylibrary.com</a></p>
+                        <p>Phone: <span>(123) 456-7890</span></p>
+                    </div>
+                </div>
+                <div class="mt-8 border-t border-gray-700 pt-4 text-center">
+                    <p class="text-sm">© 2024 MyLibrary. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
